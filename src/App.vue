@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import ListComponent from './components/ListComponent.vue'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import HelloWorld from './components/HelloWorld.vue'
   </header>
 
   <main>
-    <HelloWorld msg="Todos" />
+    <ListComponent msg="Todos" />
   </main>
 </template>
 

@@ -1,9 +1,3 @@
-<script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
-</script>
-
 <template>
   <div class="wrapper">
     <h3 class="green">{{ msg }}</h3>
@@ -14,10 +8,22 @@ defineProps<{
   </div>
 </template>
 
-<style scoped>
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  props: {
+    msg: String
+  },
+})
+</script>
+
+
+<style lang="scss" scoped>
 .checkbox {
   margin-right: 1rem;
 }
+
 h3 {
   font-size: 1.2rem;
 }
