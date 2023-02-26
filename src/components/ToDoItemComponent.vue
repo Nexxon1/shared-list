@@ -2,17 +2,21 @@
   <div class="wrapper-item">
     <div class="delete-item">Delete</div>
     <div class="move-item">Move</div>
-    <label class="text-item" for="foo">{{ msg }}</label>
-    <input class="checkbox-item" type="checkbox" id="foo" />
+    <label class="text-item" :for="item.id">{{ item.text }}</label>
+    <input class="checkbox-item" type="checkbox" :id="item.id" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import type { ToDoItem } from '@/domain/ToDoItem'
+import { defineComponent, type PropType } from 'vue'
 
 export default defineComponent({
   props: {
-    msg: String
+    item: {
+      required: true,
+      type: Object as PropType<ToDoItem>
+    }
   }
 })
 </script>
