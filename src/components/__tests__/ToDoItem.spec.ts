@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import ListComponent from '../ListComponent.vue'
+import ToDoItem from '../ToDoItem.vue'
 
-describe('ListComponent', () => {
+describe('ToDoItem', () => {
   it('renders properly', () => {
-    const wrapper = mount(ListComponent, { props: { msg: 'Hello Vitest' } })
+    const wrapper = mount(ToDoItem, { props: { msg: 'Hello Vitest' } })
     expect(wrapper.text()).toContain('Hello Vitest')
   })
 })
